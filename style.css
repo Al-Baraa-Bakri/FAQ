@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+body {
+  background-color: #a866e8;
+  font-family: "Kumbh Sans", sans-serif;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* padding-left: 140px; */
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  max-width: 900px;
+  max-height: 700px;
+  padding: 32px 0px 82px 0px;
+  margin-left: 30px;
+  margin-right: 30px;
+  overflow: hidden;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+main .img {
+  position: relative;
+  margin-left: -65px;
+  max-width: 400px;
+  /* overflow: hidden; */
+}
+main .img img:first-child {
+  position: absolute;
+  width: 800px;
+  bottom: -60%;
+  left: -110%;
+  z-index: 1;
+}
+main .img img:nth-child(2) {
+  position: relative;
+  width: 400px;
+  z-index: 10;
+  padding-right: 40px;
+  /* padding-left: 50px; */
+}
+.top {
+  position: absolute;
+  top: 40%;
+  /*left: 60px;
+  */
+  transform: translateX(-50%);
+  z-index: 12;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+.faq {
+  margin-right: 50px;
+  padding-top: 60px;
+  padding-left: 50px;
+  /* height: auto; */
+  /* display: grid;
+  grid-template-columns: 1fr;
+  align-self: flex-start; */
+}
+h1 {
+  color: #1d1e35;
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 40px;
+  position: relative;
+  align-self: flex-start;
+}
+.line {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.301);
+  display: grid;
+  grid-template-columns: minmax(150px, 300px);
+  gap: 20px 150px;
+  /* max-height: 40px;
+  overflow: hidden; */
+  margin-top: 10px;
+}
+.line p {
+  color: #4a4b5e;
+  font-size: 14px;
+  font-weight: 500;
+}
+.tow {
+  height: 2px;
+  overflow: hidden;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+}
+.line .icon {
+  align-self: center;
+  grid-row: 1;
+  grid-column: 2;
+  border: solid #f58361;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  margin-right: 10px;
+  cursor: pointer;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+.show {
+  height: 55px;
+  /* overflow: visible; */
+}
+.rotate {
+  transform: rotate(222deg) !important;
+  -webkit-transform: rotate(222deg) !important;
+  -moz-transform: rotate(222deg) !important;
+  -ms-transform: rotate(222deg) !important;
+  -o-transform: rotate(222deg) !important;
+}
+.mobil-img {
+  display: none;
+}
+@media (max-width: 760px) {
+  body {
+    flex-direction: column;
+  }
+  main {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /*height: fit-content;
+    */
+    padding-bottom: 20px;
+    max-width: 430px;
+    /*margin: 20px auto;
+    */
+    max-height: 1000px;
+    overflow: visible;
+    padding-bottom: 40px;
+    /*padding-top: 50px;
+    */
+    transform: translateY(-10%);
+    -webkit-transform: translateY(-10%);
+    -moz-transform: translateY(-10%);
+    -ms-transform: translateY(-10%);
+    -o-transform: translateY(-10%);
+  }
+  .img {
+    display: none;
+  }
+  .top {
+    display: none;
+  }
+  .mobil-img {
+    display: block;
+    transform: translate(-20px, 40px);
+    -webkit-transform: translate(-20px, 40px);
+    -moz-transform: translate(-20px, 40px);
+    -ms-transform: translate(-20px, 40px);
+    -o-transform: translate(-20px, 40px);
+    z-index: 100;
+    margin-top: 20px;
+  }
+  h1 {
+    text-align: center;
+  }
+  .line {
+    grid-template-columns: minmax(50px, 300px);
+    gap: 20px 50px;
+  }
+  .faq {
+    padding-top: 20px;
+    margin-top: 60px;
+
+    /* margin-top: 50px; */
+  }
+}
